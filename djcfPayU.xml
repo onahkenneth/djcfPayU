@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>DJ-Classifieds PayU Payment plugin</name>
+	<author>Kenneth Onah</author>
+	<creationDate>October 2015</creationDate>
+	<copyright>Copyright (C) 2015 Anything and Everything</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>kenneth@netcraft-devops.com</authorEmail>
+	<authorUrl>http://netcraft-devops.com</authorUrl>
+	<version>1.0</version>
+	<description><![CDATA[
+	<div style="margin-bottom:10px;">
+	<a target="_blank" href="http://dj-extensions.com/dj-classifieds" title="http://dj-extensions.com/dj-classifieds"><img src="../plugins/djclassifiedspayment/djcfPayU/djcfPayU/images/dj-classifieds.png" alt="DJ-Extensions.com" /></a>
+	<a target="_blank" href="https://www.payu.co.za/enquiry-form"><img title="Google Wallet merchant settings" src="../plugins/djclassifiedspayment/djcfPayU/djcfPayU/images/payu-logo.png" alt="PayU Payment plugin" /></a>
+	<span style="color: #444;font: 14px/26px 'Open Sans';">DJ-Classifieds PayU payment plugin (for online payment processing)</span>
+	</div>
+		]]></description>
+	<files>
+		<filename plugin="djcfPayU">djcfPayU.php</filename>
+		<filename>index.html</filename>
+		<folder>djcfPayU</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_djclassifiedspayment_djcfPayU.ini</language>
+	</languages>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		        <field name="test_mode" type="radio" default="1" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_TEST_MODE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_TEST_MODE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="store_name" required="true" type="text" default="3D Sim Store FAuth Off Force On" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_STORE_NAME" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_STORE_NAME_DESC" />
+				<field name="merchant_id" required="true" type="text" default="7" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_MERCHANT_ID" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_MERCHANT_ID_DESC" />
+				<field name="soap_username" required="true" type="text" default="100032" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SOAP_USERNAME" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SOAP_USERNAME_DESC" />
+				<field name="safe_key" required="true" type="text" default="{CE62CE80-0EFD-4035-87C1-8824C5C46E7F}" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SAFE_KEY" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SAFE_KEY_DESC" />
+				<field name="soap_password" required="true" type="text" default="PypWWegU" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SOAP_PASSWORD" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SOAP_PASSWORD_DESC" />
+				<field name="payment_methods" required="true" type="text" default="CREDITCARD, EFT_PRO, WALLET_PAYU" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_PAYMENT_METHODS" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_PAYMENT_METHODS_DESC" />
+				<field name="secure_3ds" type="radio" default="0" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SECURE_3DS" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_SECURE_3DS_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="budget_payment" type="radio" default="0" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_BUDGET_PAYMENT" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_BUDGET_PAYMENT_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="transaction_type" required="true" type="list" default="PAYMENT" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_TRANSACTION_TYPE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_TRANSACTION_TYPE_DESC">
+					<option value="RESERVE">RESERVE</option>
+					<option value="PAYMENT">PAYMENT</option>
+				</field>
+				<field name="currency_code" type="list" default="ZAR" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_CURRENCY_CODE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFPAYU_CURRENCY_CODE_DESC">
+					<option value="USD">USD</option>
+					<option value="ZAR">ZAR</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
