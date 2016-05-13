@@ -1,6 +1,6 @@
 # djcfPayU
-PayU South Africa payment processing plugin for DJ Classifieds.
+PayU South Africa payment processing integration with Joomal DJ Classifieds.
 
-This plugin is meant to integrate DJ Classifieds application with PayU South Africa. This will enable you to accept payments via credit/debit card, eBucks, etc on your DJ Classifieds platform.
+This plugin is meant to integrate Joomla DJ Classifieds extension with PayU South Africa secure payments. This will enable you to accept payments via credit/debit card, eBucks, etc on your Joomla DJ Classifieds platform.
 
 
